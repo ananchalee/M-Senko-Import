@@ -1,0 +1,11 @@
+﻿{
+  "profiles": {
+    "M_Senko_Import": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

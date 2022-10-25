@@ -1,0 +1,15 @@
+[
+  {
+    "No": 1,
+    "ShipTo": "DK",
+    "GroupID": "1001",
+    "GroupName": "Donki"
+  },
+  {
+    "No": 3,
+    "ShipTo": "NAG",
+    "GroupID": "1003",
+    "GroupName": "Nihon Agri"
+  }
+]
+

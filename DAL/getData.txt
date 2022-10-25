@@ -1,0 +1,2 @@
+﻿cd DAL
+dotnet ef dbcontext scaffold "Server=83.118.28.227;Database=C200040;user id=sa;password=TB@skf2022;Trusted_Connection=False;" Microsoft.EntityFrameworkCore.SqlServer -c "DataContext" -f --table tpoi --table tjob --table tjitem --table ImportLogs --table mbpd --table mdocrun -o "Data" --no-pluralize --no-onconfiguring
