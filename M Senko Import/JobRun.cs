@@ -16,9 +16,10 @@ namespace M_Senko_Import
         {
             CreatePath();
             //JobController.ImportSAP_CSV();
+            JobController.ImportScale_XLSX();
             JobController.ImportSAP_XML();
             JobController.ImportSAP_XLSX();
-            JobController.ImportScale_XLSX();
+            
 
         }
 

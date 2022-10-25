@@ -29,7 +29,6 @@ namespace M_Senko_Import.Controller
         int Jobtype = 8;
         string Jobstatus = "B";
         string HHID = "000000000000000";
-        int jobRun = 0;
         string GroupID = string.Empty;
 
         #region Path SAP
@@ -139,7 +138,7 @@ namespace M_Senko_Import.Controller
                                     Console.WriteLine("Move File: " + JobRefFullPath + " Move to:" + SAPBackup + "\\" + RefFileName);
                                     Console.WriteLine("===================================================");
                                     Console.WriteLine(string.Empty);
-
+                                    #region
                                     //using (var db = new DatabaseManager().Prototype())
 
                                     //{
@@ -182,6 +181,7 @@ namespace M_Senko_Import.Controller
                                     //    Console.WriteLine("===================================================");
                                     //    Console.WriteLine(string.Empty);
                                     //};
+                                    #endregion
                                 }
                             }
                         }
@@ -343,48 +343,6 @@ namespace M_Senko_Import.Controller
                             Console.WriteLine("===================================================");
                             Console.WriteLine(string.Empty);
 
-                            //using (var db = new DatabaseManager().Prototype())
-                            //{
-                            //    Console.WriteLine("--> Step2 Runinng JobNO");
-                            //    Jobs = JobsSAP(shipments, RefFileName);
-
-                            //    Console.WriteLine("--> Step3 Add Tjitem");
-                            //    __jobD = JobDetail(Jobs, RefFileName);
-
-                            //    Console.WriteLine("--> Step4 Add Tjob");
-                            //    __jobH = JobHeader(Jobs, RefFileName);
-
-                            //    #region Add Logs
-                            //    foreach (var H in __jobH)
-                            //    {
-                            //        LogImport.Add(new ImportLogs()
-                            //        {
-                            //            ImportStatus = true,
-                            //            FileName = RefFileName,
-                            //            JobNo = H.Jobno,
-                            //            CreateBy = RefCreateBy,
-                            //            Description = "Insert job completed,REF1=" + H.Ref1,
-                            //            CreateDate = DateTime.Now
-                            //        });
-                            //    }
-                            //    #endregion
-
-                            //    db.Tjob.AddRange(__jobH);
-                            //    db.Tjitems.AddRange(__jobD);
-                            //    db.ImportLogss.AddRange(LogImport);
-
-                            //    Console.WriteLine("--> Step5 db.Recording");
-                            //    db.SaveChanges();
-                            //    MoveFile(JobRefFullPath, SAPBackup, RefFileName);
-
-                            //    Console.WriteLine("Status: Success... " + DateTime.Now);
-                            //    Console.WriteLine("Move File: " + JobRefFullPath + " Move to:" + SAPBackup + "\\" + RefFileName);
-                            //    Console.WriteLine("===================================================");
-                            //    Console.WriteLine(string.Empty);
-
-
-                            //}
-
                         }
                     }
 
@@ -513,45 +471,6 @@ namespace M_Senko_Import.Controller
                             Console.WriteLine("===================================================");
                             Console.WriteLine(string.Empty);
 
-                            //using (var db = new DatabaseManager().Prototype())
-                            //{
-                            //    Console.WriteLine("--> Step2 Runinng JobNO");
-                            //    JobsSAPExcel(SapExcels, RefFileName);
-
-                            //    //Console.WriteLine("--> Step3 Add Tjitem");
-                            //    //__jobD = JobDetail(Jobs, RefFileName);
-
-                            //    //Console.WriteLine("--> Step4 Add Tjob");
-                            //    //__jobH = JobHeader(Jobs, RefFileName);
-
-                            //    //#region Add Logs
-                            //    //foreach (var H in __jobH)
-                            //    //{
-                            //    //    LogImport.Add(new ImportLogs()
-                            //    //    {
-                            //    //        ImportStatus = true,
-                            //    //        FileName = RefFileName,
-                            //    //        JobNo = H.Jobno,
-                            //    //        CreateBy = RefCreateBy,
-                            //    //        Description = "Insert job completed,REF1=" + H.Ref1,
-                            //    //        CreateDate = DateTime.Now
-                            //    //    });
-                            //    //}
-                            //    //#endregion
-
-                            //    //db.Tjob.AddRange(__jobH);
-                            //    //db.Tjitems.AddRange(__jobD);
-                            //    //db.ImportLogss.AddRange(LogImport);
-
-                            //    //Console.WriteLine("--> Step5 db.Recording");
-                            //    //db.SaveChanges();
-                            //    MoveFile(JobRefFullPath, SAPBackup, RefFileName);
-
-                            //    Console.WriteLine("Status: Success... " + DateTime.Now);
-                            //    Console.WriteLine("Move File: " + JobRefFullPath + " Move to:" + SAPBackup + "\\" + RefFileName);
-                            //    Console.WriteLine("===================================================");
-                            //    Console.WriteLine(string.Empty);
-                            //}
                         }
                     }
                 }
@@ -600,9 +519,6 @@ namespace M_Senko_Import.Controller
             {
                 List<ErrorShipment> ErrorShipment = new List<ErrorShipment>();
                 List<Shipment> Jobs = new List<Shipment>();
-                //List<Tjob> __jobH = new List<Tjob>();
-                //List<Tjitem> __jobD = new List<Tjitem>();
-                //List<ImportLogs> LogImport = new List<ImportLogs>();
 
                 string RefFileName = i.Name;
                 string JobRefFullPath = ScaleJob + "\\" + RefFileName;
@@ -675,50 +591,6 @@ namespace M_Senko_Import.Controller
                             Console.WriteLine("===================================================");
                             Console.WriteLine(string.Empty);
 
-                            #region
-                            //using (var db = new DatabaseManager().Prototype())
-                            //{
-
-                            //    Console.WriteLine("--> Step2 Runinng JobNO");
-                            //    JobsScaleExcel(ScaleExcels, RefFileName);
-
-                            //    //Console.WriteLine("--> Step3 Add Tjitem");
-                            //    //__jobD = JobDetail(Jobs, RefFileName);
-
-                            //    //Console.WriteLine("--> Step4 Add Tjob");
-                            //    //__jobH = JobHeader(Jobs, RefFileName);
-
-                            //    //#region Add Logs
-                            //    //foreach (var H in __jobH)
-                            //    //{
-                            //    //    LogImport.Add(new ImportLogs()
-                            //    //    {
-                            //    //        ImportStatus = true,
-                            //    //        FileName = RefFileName,
-                            //    //        JobNo = H.Jobno,
-                            //    //        CreateBy = RefCreateBy,
-                            //    //        Description = "Insert job completed,REF1=" + H.Ref1,
-                            //    //        CreateDate = DateTime.Now
-                            //    //    });
-                            //    //}
-                            //    //#endregion
-
-                            //    //db.Tjob.AddRange(__jobH);
-                            //    //db.Tjitems.AddRange(__jobD);
-                            //    //db.ImportLogss.AddRange(LogImport);
-
-                            //    //Console.WriteLine("--> Step5 db.Recording");
-                            //    //db.SaveChanges();
-
-                            //    MoveFile(JobRefFullPath, ScaleBackup, RefFileName);
-
-                            //    Console.WriteLine("Status: Success... " + DateTime.Now);
-                            //    Console.WriteLine("Move File: " + JobRefFullPath + " Move to:" + ScaleBackup + "\\" + RefFileName);
-                            //    Console.WriteLine("===================================================");
-                            //    Console.WriteLine(string.Empty);
-
-                            //}
-                            #endregion
                         }
                     }
                 }
@@ -1257,6 +1129,7 @@ namespace M_Senko_Import.Controller
 
             try
             {
+                //int jobRun = 0;
                 //string DODate = "DO" + DateTime.Parse(DateTime.Now.ToString()).ToString("yyMMdd", new CultureInfo("en-GB"));
 
                 //using (var db = new DatabaseManager().Prototype())
@@ -1273,7 +1146,6 @@ namespace M_Senko_Import.Controller
 
                 using (var db = new DatabaseManager().Prototype())
                 {
-                    //var oPrefix = db.Mdocruns.Where(o => o.Prefix == mPrefix && o.Type.Equals("job")).FirstOrDefault();
                     var oPrefix = db.Mdocrun.Where(o => o.Isdefault == true && o.Type.Equals("job")).FirstOrDefault();
 
                     if (oPrefix != null)
@@ -1547,8 +1419,6 @@ namespace M_Senko_Import.Controller
                 Console.WriteLine(message);
                 Console.ReadLine();
             }
-
-            //return Jobs;
         }
 
         public void JobsSAPExcel(List<SAPXLSX> SapExcels, string RefFileName,string PathLogs)
@@ -1684,8 +1554,6 @@ namespace M_Senko_Import.Controller
                 Console.WriteLine(message);
                 Console.ReadLine();
             }
-
-            //return Jobs;
         }
         public void JobsScaleExcel(List<ScaleExcelFile> ScaleExcels, string RefFileName,string PathLogs)
         {
@@ -1838,8 +1706,6 @@ namespace M_Senko_Import.Controller
                 Console.WriteLine(message);
                 Console.ReadLine();
             }
-
-            //return Jobs;
         }
 
         public List<Tjitem> JobDetail(List<Shipment> Jobs, string RefFileName)
@@ -1999,8 +1865,6 @@ namespace M_Senko_Import.Controller
 
                     db.ImportLogs.AddRange(LogImport);
                     db.SaveChanges();
-
-                    //var Description = ErrorShipment.Select(r => r.Description).ToList();
 
                     Logs.More(PathLogs, str, RefFileName);
 
